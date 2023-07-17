@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg bg-dark text-white">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">Ports Tracker</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active text-muted" aria-current="page" href="#">Movements</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="d-none">{{changeDetector}}</div>
+<div class="container pt-3">
+  <div class="card">
+    <h4 class="card-header">
+      Movements
+    </h4>
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Zone</th>
+          <th>Time in Zone</th>
+          <th>Time since break</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let movement of movements$ | async"
+          [class.table-warning]="toBreak(movement.movementTime) >= (90 * 60 * 1000)"
+          [class.table-danger]="toBreak(movement.movementTime) >= (110 * 60 * 1000)">
+          <td>{{movement.name}}</td>
+          <td>{{movement.zone}}</td>
+          <td>{{toDuration(movement.movementTime) | duration: 'ms':'hhmmss'}}</td>
+          <td>{{toBreak(movement.movementTime) | duration: 'ms':'hhmmss'}}</td>
+          <td class="buttons">
+
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary"
+                (click)="sendMessage(movement, 'Please return to home base')">Return Home</button>
+              <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown"
+                placement="bottom-end">
+                <button type="button" class="btn btn-primary dropdown-toggle-split" ngbDropdownToggle></button>
+                <div class="dropdown-menu" ngbDropdownMenu>
+                  <button ngbDropdownItem (click)="sendMessage(movement, 'Please report to berth')">Go to Berth</button>
+                  <button ngbDropdownItem (click)="sendMessage(movement, 'Please report to the breakroom')">Go to
+                    Breakroom</button>
+                  <button ngbDropdownItem (click)="sendMessage(movement, 'Please report to the gym')">Go to Gym</button>
+                  <button ngbDropdownItem (click)="sendMessage(movement, 'Please report to Outside Port Grounds')">Go to
+                    Outside Port Grounds</button>
+                </div>
+              </div>
+            </div>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

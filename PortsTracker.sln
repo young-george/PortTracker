@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortsTracker.Api", "PortsTracker.Api\PortsTracker.Api.csproj", "{958CEEE0-6974-401F-9290-361D0321584B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortsTracker.Application", "PortsTracker.Application\PortsTracker.Application.csproj", "{842389D0-36E3-4615-A6E6-9213A8ED3CFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortsTracker.Infrastructure", "PortsTracker.Infrastructure\PortsTracker.Infrastructure.csproj", "{195287D3-442A-4E47-90E0-6F664ABC55CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortsTracker.Domain", "PortsTracker.Domain\PortsTracker.Domain.csproj", "{980C8AC8-B313-4883-9F78-6FCDB6DA7A7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{958CEEE0-6974-401F-9290-361D0321584B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{958CEEE0-6974-401F-9290-361D0321584B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{958CEEE0-6974-401F-9290-361D0321584B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{958CEEE0-6974-401F-9290-361D0321584B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{842389D0-36E3-4615-A6E6-9213A8ED3CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{842389D0-36E3-4615-A6E6-9213A8ED3CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{842389D0-36E3-4615-A6E6-9213A8ED3CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{842389D0-36E3-4615-A6E6-9213A8ED3CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{195287D3-442A-4E47-90E0-6F664ABC55CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{195287D3-442A-4E47-90E0-6F664ABC55CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{195287D3-442A-4E47-90E0-6F664ABC55CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{195287D3-442A-4E47-90E0-6F664ABC55CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{980C8AC8-B313-4883-9F78-6FCDB6DA7A7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{980C8AC8-B313-4883-9F78-6FCDB6DA7A7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{980C8AC8-B313-4883-9F78-6FCDB6DA7A7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{980C8AC8-B313-4883-9F78-6FCDB6DA7A7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

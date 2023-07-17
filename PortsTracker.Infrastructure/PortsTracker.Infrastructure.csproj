@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.5" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.5" />
+      <PackageReference Include="Twilio" Version="5.75.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\PortsTracker.Application\PortsTracker.Application.csproj" />
+      <ProjectReference Include="..\PortsTracker.Domain\PortsTracker.Domain.csproj" />
+    </ItemGroup>
+
+</Project>
